@@ -1,0 +1,29 @@
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.csproj.AssemblyReference.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.AssemblyInfoInputs.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.AssemblyInfo.cs
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.csproj.CoreCompileInputs.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.RazorAssemblyInfo.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.RazorAssemblyInfo.cs
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\appsettings.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\F1 Webshop.staticwebassets.runtime.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\F1 Webshop.exe
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\F1 Webshop.deps.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\F1 Webshop.runtimeconfig.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\F1 Webshop.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\F1 Webshop.pdb
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\Logic.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\bin\Debug\net6.0\Logic.pdb
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\scopedcss\bundle\F1 Webshop.styles.css
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\scopedcss\projectbundle\F1 Webshop.bundle.scp.css
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.csproj.CopyComplete
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\refint\F1 Webshop.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.pdb
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\F1 Webshop.genruntimeconfig.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop\obj\Debug\net6.0\ref\F1 Webshop.dll

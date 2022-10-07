@@ -1,6 +1,10 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
-
-<p>Use this page to detail your site's privacy policy.</p>
+﻿@model ProductViewModel
+<form method="post">
+<label asp-for="Price">price</label>
+<input asp-for="Price" type="text" />
+<p>
+    <input type="submit" value="enter" />
+</p>
+</form>
+<label>Points gained</label>
+@Model.Points

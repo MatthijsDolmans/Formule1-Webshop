@@ -1,4 +1,5 @@
 ﻿using F1_Webshop.Models;
+using Logic;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -13,14 +14,19 @@ namespace F1_Webshop.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(ProductViewModel productViewModel)
         {
-            return View();
+            Product product = new Product(productViewModel.productname);
+            productViewModel.Points = product.CalculatePoints();
+            productViewModel.Price = product.CalculatePrice();
+            return View(productViewModel);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy(ProductViewModel productViewModel)
         {
-            return View();
+            Product product = new Product(productViewModel.Price);
+            productViewModel.Points = product.CalculatePoints();
+            return View(productViewModel);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

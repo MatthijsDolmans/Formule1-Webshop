@@ -1,8 +1,20 @@
-﻿@{
+﻿@model ProductViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<form method ="post">
+    <label for="product-name">choose a product</label>
+    <select name="product-names" id="product-name">
+        <option value="Cap">Cap</option>
+        <option value="Shirt">Shirt</option>
+    </select>
+        <input type="submit" value="Add to cart" />
+    </form>
+
+
+        <section>
+            <h1> @Model.Price </h1>
+        </section>
+
+    
