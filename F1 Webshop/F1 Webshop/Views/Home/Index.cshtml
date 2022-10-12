@@ -5,16 +5,20 @@
 
 <form method ="post">
     <label for="product-name">choose a product</label>
-    <select name="product-names" id="product-name">
-        <option value="Cap">Cap</option>
-        <option value="Shirt">Shirt</option>
+    <select asp-for="Productname" asp-items="Model.Productnames">
     </select>
         <input type="submit" value="Add to cart" />
     </form>
-
-
         <section>
-            <h1> @Model.Price </h1>
+            <label>Price:</label>
+            <p> @Model.Price </p>
+            <label>Stock:</label>
+            <p> @Model.Stock</p>
+            <label>Points</label>
+            <p> @Model.Points </p>
+            <label>Productname</label>
+            <p> @Model.Productname </p>
         </section>
+
 
     

@@ -16,17 +16,16 @@ namespace F1_Webshop.Controllers
 
         public IActionResult Index(ProductViewModel productViewModel)
         {
-            Product product = new Product(productViewModel.productname);
-            productViewModel.Points = product.CalculatePoints();
+            Product product = new Product(productViewModel.Price, productViewModel.Productname, productViewModel.Stock, productViewModel.Points);
             productViewModel.Price = product.CalculatePrice();
+            productViewModel.Points = product.CalculatePoints();
+            productViewModel.Stock = product.GetStock();
             return View(productViewModel);
         }
 
         public IActionResult Privacy(ProductViewModel productViewModel)
         {
-            Product product = new Product(productViewModel.Price);
-            productViewModel.Points = product.CalculatePoints();
-            return View(productViewModel);
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -9,39 +9,39 @@ namespace Logic
     public class Product
     {
 
-        public enum ProductName
-        {
-            Tshirt,
-            Cap
-        }
-        private string productName { get; set; }
+       
+        private ProductName productName { get; set; }
+        private Sizes Size { get; set; }
         private decimal Price { get; set; }
         private int Stock { get; set; }
         private double Points { get; set; }
         private bool HasEarlyAccess { get; set; }
-        private enum Sizes
+        public enum Sizes
         {
             Small,
             Medium,
             Large,
             XL
         }
-        public Product(decimal prize, string productname, int stock, double points, bool hasearlyaccess)
+        public enum ProductName
+        {
+            Tshirt,
+            Cap,
+            Trousers
+        }
+        public Product(decimal prize, ProductName productname, int stock, double points)
         {
             Price = prize;
             productName = productname;
             Stock = stock;
             Points = points;
-            HasEarlyAccess = hasearlyaccess;
         }
 
-        public Product (string productname)
+
+        public int GetStock()
         {
-            productName = productname;
-        }
-        public Product(decimal price)
-        {
-            Price = price;
+            Stock = 10;
+            return Stock;
         }
         public double CalculatePoints()
         {
@@ -51,9 +51,17 @@ namespace Logic
         }
         public decimal CalculatePrice()
         {
-            if("Cap" == productName)
+            if(ProductName.Tshirt == productName)
             {
                 Price = 22;
+            }
+           else if (ProductName.Cap == productName)
+            {
+                Price = 23;
+            }
+            else if (ProductName.Trousers == productName)
+            {
+                Price = 18.99m;
             }
             return Price;
         }
