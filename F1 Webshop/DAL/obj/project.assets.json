@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\dolma\\OneDrive\\Documenten\\semester 2 p2\\Code\\ConsoleAppCircusTrein\\F1 Webshop\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\DAL\\DAL.csproj",
+      "projectPath": "C:\\Users\\dolma\\OneDrive\\Documenten\\semester 2 p2\\Code\\ConsoleAppCircusTrein\\F1 Webshop\\DAL\\DAL.csproj",
       "packagesPath": "C:\\Users\\dolma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\DAL\\obj\\",
+      "outputPath": "C:\\Users\\dolma\\OneDrive\\Documenten\\semester 2 p2\\Code\\ConsoleAppCircusTrein\\F1 Webshop\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
