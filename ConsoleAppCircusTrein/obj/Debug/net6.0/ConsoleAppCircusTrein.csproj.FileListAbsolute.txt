@@ -1,0 +1,15 @@
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\bin\Debug\net6.0\ConsoleAppCircusTrein.exe
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\bin\Debug\net6.0\ConsoleAppCircusTrein.deps.json
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\bin\Debug\net6.0\ConsoleAppCircusTrein.runtimeconfig.json
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\bin\Debug\net6.0\ConsoleAppCircusTrein.dll
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\bin\Debug\net6.0\ConsoleAppCircusTrein.pdb
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.csproj.AssemblyReference.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.AssemblyInfoInputs.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.AssemblyInfo.cs
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.csproj.CoreCompileInputs.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.dll
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\refint\ConsoleAppCircusTrein.dll
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.pdb
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ConsoleAppCircusTrein.genruntimeconfig.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\ConsoleAppCircusTrein\ConsoleAppCircusTrein\obj\Debug\net6.0\ref\ConsoleAppCircusTrein.dll
