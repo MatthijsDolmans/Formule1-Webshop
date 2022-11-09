@@ -1,4 +1,5 @@
-﻿using F1_Webshop.Models;
+﻿using DAL;
+using F1_Webshop.Models;
 using Logic;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -16,11 +17,7 @@ namespace F1_Webshop.Controllers
 
         public IActionResult Index(ProductViewModel productViewModel)
         {
-            Product product = new Product(productViewModel.Price, productViewModel.Productname, productViewModel.Stock, productViewModel.Points);
-            productViewModel.Price = product.CalculatePrice();
-            productViewModel.Points = product.CalculatePoints();
-            productViewModel.Stock = product.GetStock();
-            return View(productViewModel);
+            return View();
         }
 
         public IActionResult Privacy(ProductViewModel productViewModel)

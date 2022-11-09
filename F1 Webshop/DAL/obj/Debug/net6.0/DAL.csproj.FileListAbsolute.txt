@@ -1,0 +1,15 @@
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\bin\Debug\net6.0\DAL.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\bin\Debug\net6.0\DAL.pdb
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\bin\Debug\net6.0\Logic.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\bin\Debug\net6.0\Logic.pdb
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.csproj.CopyComplete
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\DAL.pdb
+C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\DAL\obj\Debug\net6.0\ref\DAL.dll

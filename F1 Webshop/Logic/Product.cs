@@ -12,10 +12,12 @@ namespace Logic
        
         private ProductName productName { get; set; }
         private Sizes Size { get; set; }
-        private decimal Price { get; set; }
+        public decimal Price { get; set; }
         private int Stock { get; set; }
         private double Points { get; set; }
         private bool HasEarlyAccess { get; set; }
+
+        private readonly Iproduct _product;
         public enum Sizes
         {
             Small,
@@ -29,15 +31,53 @@ namespace Logic
             Cap,
             Trousers
         }
-        public Product(decimal prize, ProductName productname, int stock, double points)
+        public Product(Iproduct product)
+        {
+            _product = product;
+        }
+        public Product()
+        {
+        }
+        public Product(decimal prize, ProductName productname, int stock)
         {
             Price = prize;
             productName = productname;
             Stock = stock;
-            Points = points;
+        }
+        public bool CanProductBeBought()
+        {
+            if (IsProductInStock() == true & ProductNeedsEarlyaccess() == false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-
+        public bool IsProductInStock()
+        {
+            if(Stock <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public bool ProductNeedsEarlyaccess()
+        {
+            if (HasEarlyAccess == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public int GetStock()
         {
             Stock = 10;
@@ -49,20 +89,10 @@ namespace Logic
             Points = Math.Round(Points, 0);
             return Points;
         }
-        public decimal CalculatePrice()
+
+        public decimal GetPrice()
         {
-            if(ProductName.Tshirt == productName)
-            {
-                Price = 22;
-            }
-           else if (ProductName.Cap == productName)
-            {
-                Price = 23;
-            }
-            else if (ProductName.Trousers == productName)
-            {
-                Price = 18.99m;
-            }
+            _product.GetPrice(ProductName.Cap);
             return Price;
         }
     }
