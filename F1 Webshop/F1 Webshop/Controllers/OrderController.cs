@@ -7,9 +7,11 @@ namespace F1_Webshop.Controllers
 {
     public class OrderController : Controller
     {
-        public IActionResult Index(OrderViewModel orderViewModel)
+        []
+        public IActionResult Index()
         {         
-            return View(orderViewModel);
+
+            return RedirectToAction("");
         }
     }
 }

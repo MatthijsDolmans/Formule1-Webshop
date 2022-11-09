@@ -3,14 +3,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-<label>Price:</label>
-<p> @Model.Price </p>
-<label>Stock:</label>
-<p> @Model.Stock</p>
-<label>Points</label>
-<p> @Model.Points </p>
-<label>Productname</label>
-<p> @Model.Productname </p>
+@foreach(var item in Model.products)
+{
+    <div class="row" >
+        <div class="col">
+            <div class="form-group">
+                <label class="control-label"> @item.Price </label>
+                <label class="control-label"> @item.Stock </label>
+                <label class="control-label"> @item.productName </label>
+            </div>
+        </div> 
+    </div>
+}
 
 
 

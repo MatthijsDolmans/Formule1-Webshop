@@ -9,11 +9,9 @@ namespace F1_Webshop.Controllers
     {
         public IActionResult Index(ProductViewModel productViewModel)
         {
-            Product product = new Product(new ProductDAL());
-            productViewModel.Price = product.GetPrice();
-            productViewModel.Points = product.CalculatePoints();
-            productViewModel.Stock = product.GetStock();
-
+            ProductDAL productdal = new ProductDAL();
+            Product product = new Product(productdal);
+            productViewModel.products = product.GetProduct();
             return View(productViewModel);
         }
     }

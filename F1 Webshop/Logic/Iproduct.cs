@@ -9,6 +9,6 @@ namespace Logic
 {
     public interface Iproduct
     {
-        decimal GetPrice(ProductName productname);
+        List<Product> GetProduct(ProductName productname);
     }
 }

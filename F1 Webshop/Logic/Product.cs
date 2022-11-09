@@ -8,13 +8,11 @@ namespace Logic
 {
     public class Product
     {
-
-       
-        private ProductName productName { get; set; }
-        private Sizes Size { get; set; }
-        public decimal Price { get; set; }
-        private int Stock { get; set; }
-        private double Points { get; set; }
+        public ProductName productName { get; private set; }
+        public Sizes Size { get; private set; }
+        public decimal Price { get; private set; }
+        public int Stock { get; private set; }
+        public double Points { get; private set; }
         private bool HasEarlyAccess { get; set; }
 
         private readonly Iproduct _product;
@@ -69,7 +67,7 @@ namespace Logic
         }
         public bool ProductNeedsEarlyaccess()
         {
-            if (HasEarlyAccess == true)
+            if (HasEarlyAccess)
             {
                 return true;
             }
@@ -80,7 +78,6 @@ namespace Logic
         }
         public int GetStock()
         {
-            Stock = 10;
             return Stock;
         }
         public double CalculatePoints()
@@ -90,10 +87,10 @@ namespace Logic
             return Points;
         }
 
-        public decimal GetPrice()
+        public List<Product> GetProduct()
         {
-            _product.GetPrice(ProductName.Cap);
-            return Price;
+           var item = _product.GetProduct(ProductName.Cap);
+            return item;
         }
     }
 }
