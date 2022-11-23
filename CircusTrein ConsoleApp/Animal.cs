@@ -19,7 +19,7 @@ namespace CircusTrein_ConsoleApp
         public Animal(AnimalType type, AnimalSize size)
         {
             Type = type;
-            Size = size;
+            Size = size; 
         }
         public bool CheckIfAnimalCanEat(Wagon wagon)
         {

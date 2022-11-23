@@ -8,12 +8,13 @@ using static System.Formats.Asn1.AsnWriter;
 
 namespace DAL
 {
-
-
-    public class ProductDAL : Iproduct
+    public class ProductDAL : IproductDAL
     {
         private decimal price;
 
+        // timo 
+        // 1. Laat de presentatie laag bepalen wat de connectionstring is (zoek eens uit hoe appsettings werken)
+        // 2. Maak een aparte class en maak gebruik van environment variabelen
         private string Connectionstring = "Data Source=LAPTOP-CLO5RIMS\\SQLEXPRESS;Initial Catalog = Formule 1 webshop; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public List<Product> GetProduct(ProductName productname)
         {

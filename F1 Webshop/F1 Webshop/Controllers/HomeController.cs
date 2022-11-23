@@ -15,15 +15,15 @@ namespace F1_Webshop.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(ProductViewModel productViewModel)
+        public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy(ProductViewModel productViewModel)
-        {
-            return View();
-        }
+        //public IActionResult GoToShop()
+        //{
+            
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

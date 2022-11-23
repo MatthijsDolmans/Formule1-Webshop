@@ -7,7 +7,7 @@ using static Logic.Product;
 
 namespace Logic
 {
-    public interface Iproduct
+    public interface IproductDAL
     {
         List<Product> GetProduct(ProductName productname);
     }

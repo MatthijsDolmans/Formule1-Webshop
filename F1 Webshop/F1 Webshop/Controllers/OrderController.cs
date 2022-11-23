@@ -7,11 +7,11 @@ namespace F1_Webshop.Controllers
 {
     public class OrderController : Controller
     {
-        []
+        
         public IActionResult Index()
         {         
 
-            return RedirectToAction("");
+            return View();
         }
     }
 }

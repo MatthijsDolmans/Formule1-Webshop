@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GsLfewIEZYZfLHKUu6+4DiRX1bXJJrU98GxjFRAd8Gg=",
+  "Hash": "I+LbhpKus+Mmh6EhetJoLUsAj4AAnapASLBgLqAdKBQ=",
   "Source": "F1 Webshop",
   "BasePath": "_content/F1 Webshop",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\oracle-red-bull-racing-2022-team-hooded-sweat.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\Red-bull-racing-Cap-2022.jpg",
+      "SourceId": "F1 Webshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\",
+      "BasePath": "_content/F1 Webshop",
+      "RelativePath": "img/Red-bull-racing-Cap-2022.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Red-bull-racing-Cap-2022.jpg"
     },
     {
       "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\js\\site.js",

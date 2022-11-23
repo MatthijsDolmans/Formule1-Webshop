@@ -15,7 +15,7 @@ namespace Logic
         public double Points { get; private set; }
         private bool HasEarlyAccess { get; set; }
 
-        private readonly Iproduct _product;
+        private readonly IproductDAL _product;
         public enum Sizes
         {
             Small,
@@ -25,11 +25,11 @@ namespace Logic
         }
         public enum ProductName
         {
-            Tshirt,
             Cap,
+            Tshirt,
             Trousers
         }
-        public Product(Iproduct product)
+        public Product(IproductDAL product)
         {
             _product = product;
         }
@@ -76,10 +76,6 @@ namespace Logic
                 return false;
             }
         }
-        public int GetStock()
-        {
-            return Stock;
-        }
         public double CalculatePoints()
         {
             Points = (double)Price * 10;
@@ -87,9 +83,9 @@ namespace Logic
             return Points;
         }
 
-        public List<Product> GetProduct()
+        public List<Product> GetProduct(ProductName productname)
         {
-           var item = _product.GetProduct(ProductName.Cap);
+           var item = _product.GetProduct(productname);
             return item;
         }
     }
