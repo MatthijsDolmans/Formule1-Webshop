@@ -1,21 +1,19 @@
-﻿
-@model OrderViewModel
+﻿@model OrderViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<form method="post">
-</form>
-<section>
-    <img width="200" height="200" src="~/img/oracle-red-bull-racing-2022-team-hooded-sweat.jpg" />
-    <br />
-    <label>Hooded Sweater</label>
-     <input type="hidden" name="Cap" value="1" />
-    <a asp-area="" asp-controller="Product" asp-action="Index">Order</a>
-</section>
-<section>
-    <img width="200" height="200" src="~/img/Red-bull-racing-Cap-2022.jpg" />
-    <br />
-    <label>Cap</label>
-    <a type="button" asp-area="" asp-controller="Product" asp-action="Index">Order</a>
-</section>
+@foreach (var item in Model.products)
+{
+    <div class="row">
+        <div class="col">
+            <div class="form-group">
+                <label class="control-label"> Price: @item.Price </label>
+                <br>
+                <label class="control-label">  Amount of items in stock: @item.Stock </label>
+                <br>
+                <label class="control-label"> Productname: @item.productName </label>
+            </div>
+        </div>
+    </div>
+}

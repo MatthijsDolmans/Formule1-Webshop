@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T0l4L44Kxq8z8jt2tQcEJ9HM3k2UQAxi9SheCheigSCITF2fXl1FvWWCVf6Ju6mwY6rxshJ7qXJ6oUTrxFYh+g==",
+  "dgSpecHash": "tbXLVOzSRMYXXu7ENmLolggNh6Tkp4vQ6jGCSNkc9PPhXAqAm4Ts2j6Zwo+hgXv3XC6HzPPz+/hzpdinVTkxSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dolma\\Source\\Repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\F1 Webshop.csproj",
+  "projectFilePath": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\F1 Webshop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dolma\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\dolma\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

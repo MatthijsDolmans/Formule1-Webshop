@@ -13,5 +13,10 @@ namespace F1_Webshop.Controllers
 
             return View();
         }
+
+        public void OrderProduct()
+        {
+
+        }
     }
 }

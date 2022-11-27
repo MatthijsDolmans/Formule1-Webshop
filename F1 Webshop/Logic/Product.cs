@@ -25,16 +25,14 @@ namespace Logic
         }
         public enum ProductName
         {
-            Cap,
+           
             Tshirt,
+            Cap,
             Trousers
         }
         public Product(IproductDAL product)
         {
             _product = product;
-        }
-        public Product()
-        {
         }
         public Product(decimal prize, ProductName productname, int stock)
         {
