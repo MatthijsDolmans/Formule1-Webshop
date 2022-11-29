@@ -13,7 +13,7 @@ namespace Logic
         public decimal Price { get; private set; }
         public int Stock { get; private set; }
         public double Points { get; private set; }
-        private bool HasEarlyAccess { get; set; }
+        private bool HasEarlyAccess { get; set; } = false;
 
         private readonly IproductDAL _product;
         public enum Sizes
@@ -28,6 +28,7 @@ namespace Logic
            
             Tshirt,
             Cap,
+            Hooded_Sweater,
             Trousers
         }
         public Product(IproductDAL product)
@@ -40,17 +41,7 @@ namespace Logic
             productName = productname;
             Stock = stock;
         }
-        public bool CanProductBeBought()
-        {
-            if (IsProductInStock() == true & ProductNeedsEarlyaccess() == false)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+
 
         public bool IsProductInStock()
         {

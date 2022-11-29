@@ -8,27 +8,27 @@ namespace F1_Webshop.Controllers
 {
     public class ProductController : Controller
     {
-        public IActionResult Index(ProductViewModel productViewModel)
+        public IActionResult Index(ProductViewModel productViewModel,string button,string loaded)
         {
-            ProductDAL productdal = new ProductDAL();
-            Product product = new Product(productdal);
-            productViewModel.products = product.GetProduct(productViewModel.ProductName);
-            productViewModel.Price = product.Price;
+            if (!string.IsNullOrEmpty(loaded))
+            {
+                GetProductInformation(productViewModel);
+            }
+            if(!string.IsNullOrEmpty(button))
+            {
+                Order order = new Order();
+                order.OrderProduct(GetProductInformation(productViewModel));
+            }
             return View(productViewModel);
         }
 
-        //public IActionResult GetProduct(ProductViewModel productViewModel, Product.ProductName Productname)
-        //{
-        //    ProductDAL productdal = new ProductDAL();
-        //    Product product = new Product(productdal);
-        //    productViewModel.products = product.GetProduct(Productname);
-        //    productViewModel.Price = product.Price;
-        //    return View(productViewModel);
-        //}
-
-        public IActionResult BuyProduct()
+        public List<Product> GetProductInformation(ProductViewModel productviewmodel)
         {
-            return RedirectToAction("OrderProduct", "Order");
+            ProductDAL productdal = new ProductDAL();
+            Product product = new Product(productdal);
+            productviewmodel.products = product.GetProduct(productviewmodel.ProductName);
+            
+            return productviewmodel.products;
         }
     }
     

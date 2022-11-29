@@ -10,11 +10,22 @@ namespace Logic
     {
         public List<Product> ProductsBought { get; private set; }
 
-        public void BuyProduct(Product product)
+        public void OrderProduct(List<Product> product)
         {
-            if(product.CanProductBeBought() == true)
+            if (CanBeBought(product))
             {
-               ProductsBought.Add(product);
+                Console.WriteLine("test");
+            }
+        }
+        public bool CanBeBought(Product product)
+        {
+            if (product.IsProductInStock() == true & product.ProductNeedsEarlyaccess() == false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
