@@ -1,8 +1,13 @@
-﻿using System;
+﻿
+using Logic.Helpers;
+using Logic.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Logic.Helpers.ProductNameEnum;
+using static Logic.Helpers.ProductSizeEnum;
 
 namespace Logic
 {
@@ -15,23 +20,8 @@ namespace Logic
         public double Points { get; private set; }
         private bool HasEarlyAccess { get; set; } = false;
 
-        private readonly IproductDAL _product;
-        public enum Sizes
-        {
-            Small,
-            Medium,
-            Large,
-            XL
-        }
-        public enum ProductName
-        {
-           
-            Tshirt,
-            Cap,
-            Hooded_Sweater,
-            Trousers
-        }
-        public Product(IproductDAL product)
+        private readonly IProductDAL _product;
+        public Product(IProductDAL product)
         {
             _product = product;
         }
@@ -40,12 +30,13 @@ namespace Logic
             Price = prize;
             productName = productname;
             Stock = stock;
+            Points = CalculatePoints();
         }
 
 
-        public bool IsProductInStock()
+        public bool IsProductInStock(int stock)
         {
-            if(Stock <= 0)
+            if(stock <= 0)
             {
                 return false;
             }
@@ -71,11 +62,14 @@ namespace Logic
             Points = Math.Round(Points, 0);
             return Points;
         }
-
-        public List<Product> GetProduct(ProductName productname)
+        public void UpdateProductPrice(ProductName productname,decimal Price)
         {
-           var item = _product.GetProduct(productname);
-            return item;
+            _product.UpdateProductPrice(productname, Price);
+        }
+        public int UpdateProductStock(ProductName productname, int stock)
+        {
+
+            return _product.UpdateProductStock(productname, stock);
         }
     }
 }

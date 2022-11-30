@@ -1,6 +1,6 @@
 ﻿using Logic;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using static Logic.Product;
+using static Logic.ProductCollection;
 
 namespace F1_Webshop.Models
 {

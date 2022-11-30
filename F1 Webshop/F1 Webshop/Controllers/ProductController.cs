@@ -2,7 +2,7 @@
 using F1_Webshop.Models;
 using Logic;
 using Microsoft.AspNetCore.Mvc;
-using static Logic.Product;
+using static Logic.ProductCollection;
 
 namespace F1_Webshop.Controllers
 {
@@ -16,8 +16,10 @@ namespace F1_Webshop.Controllers
             }
             if(!string.IsNullOrEmpty(button))
             {
+                ProductDAL productdal = new ProductDAL();
                 Order order = new Order();
-                order.OrderProduct(GetProductInformation(productViewModel));
+                order.OrderProduct(GetProductInformation(productViewModel),productdal);
+                return RedirectToAction("Index", "Order");
             }
             return View(productViewModel);
         }
@@ -25,7 +27,7 @@ namespace F1_Webshop.Controllers
         public List<Product> GetProductInformation(ProductViewModel productviewmodel)
         {
             ProductDAL productdal = new ProductDAL();
-            Product product = new Product(productdal);
+            ProductCollection product = new ProductCollection(productdal);
             productviewmodel.products = product.GetProduct(productviewmodel.ProductName);
             
             return productviewmodel.products;

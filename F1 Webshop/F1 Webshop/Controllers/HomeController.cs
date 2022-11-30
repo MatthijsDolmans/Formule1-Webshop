@@ -19,11 +19,14 @@ namespace F1_Webshop.Controllers
         {
             return View();
         }
-
-        //public IActionResult GoToShop()
-        //{
-            
-        //}
+        public IActionResult GoToShop()
+        {
+            return RedirectToAction("Index", "Product");
+        }
+        public IActionResult GoToAboutUs()
+        {
+            return RedirectToAction("Index", "AboutUs");
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

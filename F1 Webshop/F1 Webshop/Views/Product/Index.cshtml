@@ -5,36 +5,40 @@
 
 <form method="post">
     <section class="Hooded_Sweater">
-        <img width="200" height="200" src="~/img/oracle-red-bull-racing-2022-team-hooded-sweat.jpg" />
+        <img width="200" height="200" src="~/img/oracle-red-bull-racing-2022-team-hooded-sweat.png" />
         <br />
-        <label>Red-Bull original Hooded Sweater</label>
+        <center>
+            <label><strong>Red-Bull original Hooded Sweater</strong></label>
+        </center>
         <input asp-for="ProductName" id="Productname" name="Productname" type="hidden" value="Hooded_Sweater" />
         <br/>
-        <input name="loaded" type="submit" value="Show Information">
+        <input class="btn" name="loaded" type="submit" value="Show Information">
     </section>
 </form>
 <form  method="post">
     <section class="cap">
-        <img width="200" height="200" src="~/img/Red-bull-racing-Cap-2022.jpg" />
+        <img width="200" height="200" src="~/img/Red-bull-racing-Cap-2022.png" />
         <br/>
-        <label>Red-Bull original Cap</label>
+        <center>
+            <label><strong>Red-Bull original Cap</strong></label>
         <input asp-for="ProductName" id="Productname" name="Productname" type="hidden" value="Cap" />
+        </center>
         <br/>
-        <input name="loaded" type="submit" value="Show Information">
+        <input class="btn" name="loaded" type="submit" value="Show Information">
     </section>
 </form>
 <form method="post">
     <section class="Tshirt">
-        <img width="200" height="200" src="~/img/Tshirt-Red-bull.jpg" />
+        <img width="200" height="200" src="~/img/Tshirt Red bull.png" />
         <br />
-        <label>Red-Bull original Tshirt</label>
+        <center>
+            <label><strong>Red-Bull original Tshirt</strong></label>
+        </center>
         <input asp-for="ProductName" id="Productname" name="Productname" type="hidden" value="Tshirt" />
         <br />
-        <input name="loaded" type="submit" value="Show Information">
+        <input class="btn" name="loaded" type="submit" value="Show Information">
     </section>
 </form>
-
-
 
 @if (Model.products != null)
 @foreach (var item in Model.products)
@@ -42,23 +46,20 @@
     <div class="row">
         <div class="col">
             <div class="form-group">
-                <label class="control-label"> Price: @item.Price </label>
+                <strong>
+                <label class="control-label"> Price: €@item.Price </label>
                 <br>
                 <label class="control-label">  Amount of items in stock: @item.Stock </label>
                 <br>
                 <label class="control-label"> Productname: @item.productName </label>
+                    </strong>
             </div>
                 <form method="post">
-                    <button name="button" value="Order">Order</button>
+                    <button class="btn" name="button" value="Order">Order</button>
                 </form>
         </div>
     </div>
 }
-
-
-
-
-
 
 
 
@@ -68,7 +69,6 @@
         top: 10%;
         left: 10%;
     }
-
     .Hooded_Sweater {
         position: absolute;
         top: 10%;
@@ -83,5 +83,24 @@
         position: absolute;
         bottom: 10%;
         left: 10%;
+    }
+
+    body {
+        background-color: dodgerblue;
+    }
+
+    .btn {
+        background-color: blue;
+        border-radius: 50px;
+        border-width: 0;
+        box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+        color: black;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-size: 1em;
+        height: 50px;
+        padding: 0 25px;
+        transition: all 200ms;
     }
 </style>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "dw1DFVqUA6pE+mYT3hmkOEzu2DuF/vtHPLcI78DAEVA=",
+  "Hash": "wQgYNe5g+utTWUFU42zd8bImrEsGbxAZ8c3kc9ujNO0=",
   "Source": "F1 Webshop",
   "BasePath": "_content/F1 Webshop",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\oracle-red-bull-racing-2022-team-hooded-sweat.jpg",
+      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\2017-formula-one-new-logo-design-2.png",
       "SourceId": "F1 Webshop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\",
       "BasePath": "_content/F1 Webshop",
-      "RelativePath": "img/oracle-red-bull-racing-2022-team-hooded-sweat.jpg",
+      "RelativePath": "img/2017-formula-one-new-logo-design-2.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,15 +99,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\oracle-red-bull-racing-2022-team-hooded-sweat.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\2017-formula-one-new-logo-design-2.png"
     },
     {
-      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\Red-bull-racing-Cap-2022.jpg",
+      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\oracle-red-bull-racing-2022-team-hooded-sweat.png",
       "SourceId": "F1 Webshop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\",
       "BasePath": "_content/F1 Webshop",
-      "RelativePath": "img/Red-bull-racing-Cap-2022.jpg",
+      "RelativePath": "img/oracle-red-bull-racing-2022-team-hooded-sweat.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -116,15 +116,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Red-bull-racing-Cap-2022.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\oracle-red-bull-racing-2022-team-hooded-sweat.png"
     },
     {
-      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\Tshirt-Red-bull.jpg",
+      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\Red-bull-racing-Cap-2022.png",
       "SourceId": "F1 Webshop",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\",
       "BasePath": "_content/F1 Webshop",
-      "RelativePath": "img/Tshirt-Red-bull.jpg",
+      "RelativePath": "img/Red-bull-racing-Cap-2022.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\Tshirt-Red-bull.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\Red-bull-racing-Cap-2022.png"
+    },
+    {
+      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\Tshirt Red bull.png",
+      "SourceId": "F1 Webshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\",
+      "BasePath": "_content/F1 Webshop",
+      "RelativePath": "img/Tshirt Red bull.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Tshirt Red bull.png"
     },
     {
       "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\js\\site.js",

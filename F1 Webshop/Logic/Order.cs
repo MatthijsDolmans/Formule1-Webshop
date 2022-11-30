@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,23 +11,32 @@ namespace Logic
     {
         public List<Product> ProductsBought { get; private set; }
 
-        public void OrderProduct(List<Product> product)
+        public void OrderProduct(List<Product> productValues, IProductDAL Product)
         {
-            if (CanBeBought(product))
+            Product product = new Product(Product);
+            if (CanBeBought(productValues, product))
             {
-                Console.WriteLine("test");
+                foreach (var item in productValues)
+                {
+                    product.UpdateProductStock(item.productName,item.Stock);
+                }
             }
         }
-        public bool CanBeBought(Product product)
+        public bool CanBeBought(List<Product> productValues,Product product)
         {
-            if (product.IsProductInStock() == true & product.ProductNeedsEarlyaccess() == false)
+            foreach(var item in productValues)
             {
-                return true;
+                if (product.IsProductInStock(item.Stock) == true & product.ProductNeedsEarlyaccess() == false)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
-            {
-                return false;
-            }
+            return false;
+          
         }
     }
 }

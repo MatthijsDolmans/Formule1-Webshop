@@ -12,8 +12,4 @@
     <ProjectReference Include="..\Logic\Logic.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="wwwroot\img\oracle-red-bull-racing-2022-team-hooded-sweat.jpg" />
-  </ItemGroup>
-
 </Project>

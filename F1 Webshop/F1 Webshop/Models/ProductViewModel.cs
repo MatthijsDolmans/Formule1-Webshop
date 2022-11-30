@@ -1,7 +1,8 @@
 ﻿using Logic;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Cryptography;
-using static Logic.Product;
+using static Logic.Helpers.ProductNameEnum;
+using static Logic.ProductCollection;
 
 namespace F1_Webshop.Models
 {

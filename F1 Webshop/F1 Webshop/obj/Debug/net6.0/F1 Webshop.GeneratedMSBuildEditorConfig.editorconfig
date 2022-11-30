@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\dolma\source\repos\Formule1-Webshop\F1 Webshop\F1 Webshop
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/dolma/source/repos/Formule1-Webshop/F1 Webshop/F1 Webshop/Views/AboutUs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWJvdXRVc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/dolma/source/repos/Formule1-Webshop/F1 Webshop/F1 Webshop/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

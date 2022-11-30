@@ -1,24 +1,56 @@
-﻿@*@model ProductViewModel
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
 }
 
-<form method ="post">
-    <label for="product-name">choose a product</label>
-    <select asp-for="Productname" asp-items="Model.Productnames">
-    </select>
-        <input type="submit" value="Add to cart" />
-    </form>
-        <section>
-            <label>Price:</label>
-            <p> @Model.Price </p>
-            <label>Stock:</label>
-            <p> @Model.Stock</p>
-            <label>Points</label>
-            <p> @Model.Points </p>
-            <label>Productname</label>
-            <p> @Model.Productname </p>
-        </section>
+<div>
+    <h1><strong>Welcome to the Formula 1 Webshop</strong></h1>
+    <br />
+    <div class="Text">
+    <p> Welcome to the official Formula One online store, the one-stop shop for the high-octane sport of F1, specialising in distributing the latest and greatest F1 and Grand Prix 
+        merchandise, while stocking an unrivalled range of authentic and licenced teamwear, caps, fan apparel and accessories.the F1 online store has just about everything an F1 
+        enthusiast might need to support their favourite teams and drivers, across the thrilling Formula 1 Grand Prix season.
+    </p>
+    </div>
+</div>
 
-*@
-    
+<div>
+    <form asp-controller="Home" asp-action="GoToShop" method="post">
+    <button class="btn"> Buy now </button>
+    </form>
+</div>
+<div>
+    <form asp-controller="Home" asp-action="GoToAboutUs" method="post">
+        <br />
+        <button class="btn"> About us </button>
+    </form>
+</div>
+<div class="picture">
+    <img width="400" height="400" src="~/img/2017-formula-one-new-logo-design-2.png" />
+</div>
+
+<style scoped>
+
+    body {
+        background-color: dodgerblue;
+    }
+    .picture{
+        position: absolute;
+        bottom: 25%;
+        right: 35%;
+    }
+
+    .btn{
+        background-color:blue;
+        border-radius: 50px;
+        border-width: 0;
+        box-shadow: rgba(25, 25, 25, 0.04) 0 0 1px 0, rgba(0, 0, 0, 0.1) 0 3px 4px 0;
+        color: black;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Arial, sans-serif;
+        font-size: 1em;
+        height: 50px;
+        padding: 0 25px;
+        transition: all 200ms;
+    }
+</style>
