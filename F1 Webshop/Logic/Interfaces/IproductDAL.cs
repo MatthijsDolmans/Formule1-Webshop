@@ -10,6 +10,6 @@ namespace Logic.Interfaces
     public interface IProductDAL
     {
         public void UpdateProductPrice(ProductName productName, decimal price);
-        public int UpdateProductStock(ProductName productName, int Stock);
+        public void UpdateProductStock(ProductName productName);
     }
 }

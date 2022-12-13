@@ -8,11 +8,14 @@ namespace F1_Webshop.Controllers
     public class OrderController : Controller
     {
         
-        public IActionResult Index()
-        {         
-
-            return View();
+        public IActionResult Index(OrderViewModel orderviewmodel)
+        {
+            OrderDAL orderdal = new OrderDAL();
+            Order order = new Order(orderdal);
+            orderviewmodel.Boughtproducts = order.GetOrders();
+            return View(orderviewmodel);
         }
+
 
     
     }

@@ -3,3 +3,37 @@
     ViewData["Title"] = "Home Page";
 }
 <h1>order complete</h1>
+<div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+    <center>
+        <table class="table my-0" id="dataTable">
+<thead>
+    <tr>
+        <th><strong>Price</strong></th>
+        <th><strong>ProductName</strong></th>
+        <th><strong>Points</strong></th>
+        <td><strong>Date</strong></td>
+    </tr>
+</thead>
+        <tbody>
+            <tr>
+               @foreach(var item in Model.Boughtproducts)
+                {
+                    <td>@item.Price</td>
+                    <td>@item.productName</td>
+                    <td>@item.Points</td>
+                    <td>01-12-2022</td>
+                }
+
+            </tr>
+        </tbody>
+    <tfoot>
+        <tr>
+            <td><strong>Price</strong></td>
+            <td><strong>ProductName</strong></td>
+            <td><strong>Points</strong></td>
+            <td><strong>Date</strong></td>
+        </tr>
+    </tfoot>
+    </table>
+    </div>
+     

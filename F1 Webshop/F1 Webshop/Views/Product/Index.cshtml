@@ -3,7 +3,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<form method="post">
+<form method="get">
     <section class="Hooded_Sweater">
         <img width="200" height="200" src="~/img/oracle-red-bull-racing-2022-team-hooded-sweat.png" />
         <br />
@@ -12,10 +12,10 @@
         </center>
         <input asp-for="ProductName" id="Productname" name="Productname" type="hidden" value="Hooded_Sweater" />
         <br/>
-        <input class="btn" name="loaded" type="submit" value="Show Information">
+        <input class="btn" name="Go" type="submit" value="Show Information">
     </section>
 </form>
-<form  method="post">
+<form  method="get">
     <section class="cap">
         <img width="200" height="200" src="~/img/Red-bull-racing-Cap-2022.png" />
         <br/>
@@ -24,10 +24,10 @@
         <input asp-for="ProductName" id="Productname" name="Productname" type="hidden" value="Cap" />
         </center>
         <br/>
-        <input class="btn" name="loaded" type="submit" value="Show Information">
+        <input class="btn" name="Go" type="submit" value="Show Information">
     </section>
 </form>
-<form method="post">
+<form method="get">
     <section class="Tshirt">
         <img width="200" height="200" src="~/img/Tshirt Red bull.png" />
         <br />
@@ -36,7 +36,7 @@
         </center>
         <input asp-for="ProductName" id="Productname" name="Productname" type="hidden" value="Tshirt" />
         <br />
-        <input class="btn" name="loaded" type="submit" value="Show Information">
+        <input class="btn" name="Go" type="submit" value="Show Information">
     </section>
 </form>
 
@@ -46,6 +46,7 @@
     <div class="row">
         <div class="col">
             <div class="form-group">
+                    <h1>ProductInformation</h1>
                 <strong>
                 <label class="control-label"> Price: €@item.Price </label>
                 <br>
@@ -54,7 +55,7 @@
                 <label class="control-label"> Productname: @item.productName </label>
                     </strong>
             </div>
-                <form method="post">
+                <form method="get">
                     <button class="btn" name="button" value="Order">Order</button>
                 </form>
         </div>

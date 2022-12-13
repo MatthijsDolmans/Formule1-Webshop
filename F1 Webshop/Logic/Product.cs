@@ -32,6 +32,12 @@ namespace Logic
             Stock = stock;
             Points = CalculatePoints();
         }
+        public Product(decimal prize, ProductName productname)
+        {
+            Price = prize;
+            productName = productname;
+            Points = CalculatePoints();
+        }
 
 
         public bool IsProductInStock(int stock)
@@ -66,10 +72,10 @@ namespace Logic
         {
             _product.UpdateProductPrice(productname, Price);
         }
-        public int UpdateProductStock(ProductName productname, int stock)
+        public void UpdateProductStock(ProductName productname)
         {
 
-            return _product.UpdateProductStock(productname, stock);
+            _product.UpdateProductStock(productname);
         }
     }
 }

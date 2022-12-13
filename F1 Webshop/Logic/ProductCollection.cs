@@ -21,7 +21,7 @@ namespace Logic
 
         public List<Product> GetProduct(ProductName productname)
         {
-            var item = _product.GetProduct(productname);
+            List<Product> item = _product.GetProduct(productname);
             return item;
         }
     }

@@ -9,7 +9,6 @@ namespace F1_Webshop.Models
     public class ProductViewModel
     {
         public List<Product> products { get; set; }
-        public decimal Price { get; set; }
 
         public ProductName ProductName { get; set; }
     }

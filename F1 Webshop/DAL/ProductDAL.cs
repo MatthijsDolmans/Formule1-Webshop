@@ -58,20 +58,37 @@ namespace DAL
             }
         }
 
-        public int UpdateProductStock(ProductName productName, int Stock)
+        public void UpdateProductStock(ProductName productName)
         {
-            int newstock = Stock -1;
-            string Query = "UPDATE Product SET Stock = @Stock where ProductName = @productname";
+            int newstock;
+            string Query = "SELECT Stock FROM Product where ProductName = @productname";
 
             using (SqlConnection conn = new SqlConnection(Connectionstring))
             {
+                using (SqlCommand query = new SqlCommand(Query, conn))
+                {
+                    query.Parameters.AddWithValue("@productname", productName.ToString());
+                    conn.Open();
 
-                SqlCommand comm = conn.CreateCommand();
-                comm.CommandText = Query;
-                comm.Parameters.AddWithValue("@productname", productName);
-                comm.Parameters.AddWithValue("@Stock", newstock);
+                    var reader = query.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        newstock = Convert.ToInt32(reader["Stock"]) - 1;
+
+                        string Query2 = "UPDATE Product SET Stock = @Stock where ProductName = @productname";
+
+                        using (SqlConnection conn2 = new SqlConnection(Connectionstring))
+                        {
+
+                            SqlCommand comm = conn.CreateCommand();
+                            comm.CommandText = Query;
+                            comm.Parameters.AddWithValue("@productname", productName);
+                            comm.Parameters.AddWithValue("@Stock", newstock);
+                        }
+                    }
+                }
             }
-            return newstock;
         }
     }
 }

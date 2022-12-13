@@ -9,8 +9,17 @@ namespace Logic
 {
     public class Order
     {
-        public List<Product> ProductsBought { get; private set; }
-
+        public DateTime Date { get; set; }
+        private readonly IorderDAL _order;
+        public Order(IorderDAL order)
+        {
+            _order = order;
+            Date = DateTime.Now;
+        }
+        public List<Product> GetOrders()
+        {
+           return _order.GetOrders();
+        }
         public void OrderProduct(List<Product> productValues, IProductDAL Product)
         {
             Product product = new Product(Product);
@@ -18,7 +27,9 @@ namespace Logic
             {
                 foreach (var item in productValues)
                 {
-                    product.UpdateProductStock(item.productName,item.Stock);
+                    product.UpdateProductStock(item.productName);
+                   int productid = _order.GetProductID(item.productName.ToString());
+                    _order.MakeOrder(Date, productid);
                 }
             }
         }
