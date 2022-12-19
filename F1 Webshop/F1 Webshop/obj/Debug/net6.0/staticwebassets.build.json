@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wQgYNe5g+utTWUFU42zd8bImrEsGbxAZ8c3kc9ujNO0=",
+  "Hash": "Sc+TbAci+fxjBDW6tjB4D7eiHza8E4qs5zNNuFfL43M=",
   "Source": "F1 Webshop",
   "BasePath": "_content/F1 Webshop",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\2017-formula-one-new-logo-design-2.png"
+    },
+    {
+      "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\Max Worldchampion T-shirt.png",
+      "SourceId": "F1 Webshop",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\",
+      "BasePath": "_content/F1 Webshop",
+      "RelativePath": "img/Max Worldchampion T-shirt.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Max Worldchampion T-shirt.png"
     },
     {
       "Identity": "C:\\Users\\dolma\\source\\repos\\Formule1-Webshop\\F1 Webshop\\F1 Webshop\\wwwroot\\img\\oracle-red-bull-racing-2022-team-hooded-sweat.png",

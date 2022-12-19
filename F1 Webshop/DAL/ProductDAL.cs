@@ -80,11 +80,12 @@ namespace DAL
 
                         using (SqlConnection conn2 = new SqlConnection(Connectionstring))
                         {
-
-                            SqlCommand comm = conn.CreateCommand();
-                            comm.CommandText = Query;
-                            comm.Parameters.AddWithValue("@productname", productName);
+                            conn2.Open();
+                            SqlCommand comm = conn2.CreateCommand();
+                            comm.CommandText = Query2;
+                            comm.Parameters.AddWithValue("@productname", productName.ToString());
                             comm.Parameters.AddWithValue("@Stock", newstock);
+                            comm.ExecuteNonQuery();
                         }
                     }
                 }

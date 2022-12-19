@@ -8,9 +8,8 @@ namespace Logic.Interfaces
 {
     public interface IorderDAL
     {
-        public void MakeOrder(DateTime date,int ProductId);
-
-        public List<Product> GetOrders();
+        public void MakeOrder(DateTime date,int ProductId,int userid);
+        public List<Product> GetOrders(int userid);
         public int GetProductID(string productname);
     }
 }

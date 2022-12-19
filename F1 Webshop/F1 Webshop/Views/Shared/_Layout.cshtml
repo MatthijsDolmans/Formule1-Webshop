@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~/F1_Webshop.styles.css" asp-append-version="true" />
 </head>
 <body>
+    @*@if (HttpContext.Request.Cookies["ProductName"] == null)*@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -23,7 +24,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Index">Order</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="Index">Orders</a>
                         </li>
                     </ul>
                 </div>

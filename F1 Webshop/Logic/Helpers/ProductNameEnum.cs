@@ -13,7 +13,8 @@ namespace Logic.Helpers
             Tshirt,
             Cap,
             Hooded_Sweater,
-            Trousers
+            Trousers,
+            Maxworldchampion_Tshirt
         }
     }
 }

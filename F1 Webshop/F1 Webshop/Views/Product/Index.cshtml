@@ -39,6 +39,18 @@
         <input class="btn" name="Go" type="submit" value="Show Information">
     </section>
 </form>
+<form method="get">
+    <section class="Maxworldchampion_Tshirt">
+        <img width="200" height="200" src="~/img/Max Worldchampion T-shirt.png" />
+        <br />
+        <center>
+            <label><strong>Max Verstappen world champion Tshirt</strong></label>
+        </center>
+        <input asp-for="ProductName" id="Productname" name="Productname" type="hidden" value="Maxworldchampion_Tshirt" />
+        <br />
+        <input class="btn" name="Go" type="submit" value="Show Information">
+    </section>
+</form>
 
 @if (Model.products != null)
 @foreach (var item in Model.products)
@@ -80,10 +92,16 @@
         top: 10%;
         left: 50%;
     }
+
+    .Maxworldchampion_Tshirt{
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
     .row{
         position: absolute;
-        bottom: 10%;
-        left: 10%;
+        top: 15%;
+        left: 75%;
     }
 
     body {

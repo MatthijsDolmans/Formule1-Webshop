@@ -12,7 +12,7 @@ namespace F1_Webshop.Controllers
         {
             OrderDAL orderdal = new OrderDAL();
             Order order = new Order(orderdal);
-            orderviewmodel.Boughtproducts = order.GetOrders();
+            orderviewmodel.Boughtproducts = order.GetOrders((int)HttpContext.Session.GetInt32("UserId"));
             return View(orderviewmodel);
         }
 

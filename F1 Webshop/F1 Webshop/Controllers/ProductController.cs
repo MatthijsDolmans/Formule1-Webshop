@@ -22,8 +22,8 @@ namespace F1_Webshop.Controllers
                 ProductDAL productdal = new ProductDAL();
                 OrderDAL orderdal = new OrderDAL();
                 Order order = new Order(orderdal);
-                var a = HttpContext.Request.Cookies["ProductName"];
-                order.OrderProduct(GetProductInformationn(a,productViewModel),productdal);
+                string productname = HttpContext.Request.Cookies["ProductName"];
+                order.OrderProduct(GetProductInformationToOrder(productname,productViewModel),productdal, (int)HttpContext.Session.GetInt32("UserId"));
                 return RedirectToAction("Index", "Order");
             }
             return View(productViewModel);
@@ -36,13 +36,13 @@ namespace F1_Webshop.Controllers
             
             return productviewmodel.products;
         }
-        public List<Product> GetProductInformationn(string a, ProductViewModel productviewmodel)
+        public List<Product> GetProductInformationToOrder(string productname, ProductViewModel productviewmodel)
         {
             ProductDAL productdal = new ProductDAL();
             ProductCollection product = new ProductCollection(productdal);
            foreach(ProductNameEnum.ProductName name in Enum.GetValues(typeof(ProductNameEnum.ProductName)))
             {
-                if(name.ToString() == a)
+                if(name.ToString() == productname)
                 {
                     productviewmodel.products = product.GetProduct(name);
                 }

@@ -7,14 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Logic.Helpers.ProductNameEnum;
-using static Logic.Helpers.ProductSizeEnum;
 
 namespace Logic
 {
     public class Product
     {
         public ProductName productName { get; private set; }
-        public Sizes Size { get; private set; }
         public decimal Price { get; private set; }
         public int Stock { get; private set; }
         public double Points { get; private set; }

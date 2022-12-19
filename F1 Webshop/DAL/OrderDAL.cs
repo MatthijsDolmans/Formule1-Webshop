@@ -15,9 +15,9 @@ namespace DAL
     public class OrderDAL : IorderDAL
     {
         private string Connectionstring = "Data Source=LAPTOP-CLO5RIMS\\SQLEXPRESS;Initial Catalog = Formule 1 webshop; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        public List<Product> GetOrders()
+        public List<Product> GetOrders(int userid)
         {
-           List<int> Orderids = GetOrderIDS();
+           List<int> Orderids = GetOrderIDS(userid);
            List<int> productIds = GetProductIDS(Orderids);
            List<Product> products = new List<Product>();
             foreach (var item in productIds)
@@ -53,15 +53,15 @@ namespace DAL
             return products;
         }
 
-        private List<int> GetOrderIDS()
+        private List<int> GetOrderIDS(int userid)
         {
-            string Query = "SELECT OrderId FROM [dbo].[Order] WHERE CustomerId = 1";
+            string Query = "SELECT OrderId FROM [dbo].[Order] WHERE CustomerId = @CustomerId";
             List<int> OrderIds = new List<int>();
             using (SqlConnection conn = new SqlConnection(Connectionstring))
             {
                 SqlCommand comm = new SqlCommand(Query, conn);
                 conn.Open();
-
+                comm.Parameters.AddWithValue("@CustomerId", userid);
                 using (SqlDataReader reader = comm.ExecuteReader())
                 {
                     while (reader.Read())
@@ -100,15 +100,16 @@ namespace DAL
             return ProductIds;
 
         }
-        public void MakeOrder(DateTime date,int ProductId)
+        public void MakeOrder(DateTime date,int ProductId, int userid)
         {
-            string Query = "INSERT INTO [dbo].[Order]([OrderId],[Date],[CustomerId])VALUES(@OrderId,@date,1)";
+            string Query = "INSERT INTO [dbo].[Order]([OrderId],[Date],[CustomerId])VALUES(@OrderId,@date,@CustomerId)";
             int orderid = GetNextId();
             using (SqlConnection conn = new SqlConnection(Connectionstring))
             {
                 conn.Open();
-
+               
                 SqlCommand comm = conn.CreateCommand();
+                comm.Parameters.AddWithValue("@CustomerId", userid);
                 comm.CommandText = Query;
                 comm.Parameters.AddWithValue("@date", date);
                 comm.Parameters.AddWithValue("@OrderId", orderid);
