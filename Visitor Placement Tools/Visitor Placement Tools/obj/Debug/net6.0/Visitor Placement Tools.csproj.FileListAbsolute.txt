@@ -1,0 +1,15 @@
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\bin\Debug\net6.0\Visitor Placement Tools.exe
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\bin\Debug\net6.0\Visitor Placement Tools.deps.json
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\bin\Debug\net6.0\Visitor Placement Tools.runtimeconfig.json
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\bin\Debug\net6.0\Visitor Placement Tools.dll
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\bin\Debug\net6.0\Visitor Placement Tools.pdb
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.csproj.AssemblyReference.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.AssemblyInfoInputs.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.AssemblyInfo.cs
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.csproj.CoreCompileInputs.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.dll
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\refint\Visitor Placement Tools.dll
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.pdb
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\Visitor Placement Tools.genruntimeconfig.cache
+C:\Users\dolma\OneDrive\Documenten\semester 2 p2\Code\Visitor Placement Tools\Visitor Placement Tools\obj\Debug\net6.0\ref\Visitor Placement Tools.dll
