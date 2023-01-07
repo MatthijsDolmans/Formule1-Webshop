@@ -7,6 +7,7 @@
         <table class="table my-0" id="dataTable">
 <thead>
     <tr>
+        <th><strong>Orderid</strong></th>
         <th><strong>Price</strong></th>
         <th><strong>ProductName</strong></th>
         <th><strong>Points</strong></th>
@@ -18,6 +19,7 @@
                @foreach(var item in Model.Boughtproducts)
                 {
                 <tr>
+                    <td>@item.orderid</td>
                     <td>@item.Price</td>
                     <td>@item.productName</td>
                     <td>@item.Points</td>
@@ -27,6 +29,7 @@
         </tbody>
     <tfoot>
         <tr>
+            <td><strong>Orderid</strong></td>
             <td><strong>Price</strong></td>
             <td><strong>ProductName</strong></td>
             <td><strong>Points</strong></td>

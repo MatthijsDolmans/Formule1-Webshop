@@ -52,7 +52,10 @@
     </section>
 </form>
 
+
+
 @if (Model.products != null)
+{
 @foreach (var item in Model.products)
 {
     <div class="row">
@@ -73,10 +76,40 @@
         </div>
     </div>
 }
+    @if (Model.ordernumbers != null)
+    {
+        <form>
+        <section class="ordernumbers">
+            <div class="col-lg-5" style="padding: 12px;margin-left: auto; margin-right:auto;">
+                <div class="form-group" id="ordernumber">
+                    <strong>
+                    <label>ordernumber</label>
+                    </strong>
+                    <select asp-for="chosenordernumber" class="form-control">
+                        @foreach (var item in Model.ordernumbers)
+                        {
+                            <option>
+                                @item
+                            </option>
+                        }
+                    </select>
+                </div>
+            </div>
+                <button class="btn" name="orderbyorderid" value="Orderbyorderid">Order to existing order</button>
+            </section>
+            </form>
 
+    }
+}
 
 
 <style scoped>
+
+    .ordernumbers {
+        position: absolute;
+        top: 35%;
+        left: 75%;
+    }
     .cap {
         position: absolute;
         top: 10%;

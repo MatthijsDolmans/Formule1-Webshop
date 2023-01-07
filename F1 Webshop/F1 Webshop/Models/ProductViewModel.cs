@@ -11,6 +11,9 @@ namespace F1_Webshop.Models
         public List<Product> products { get; set; }
 
         public ProductName ProductName { get; set; }
+
+        public List<int> ordernumbers { get; set; }
+        public int chosenordernumber { get; set; }
     }
 }
 

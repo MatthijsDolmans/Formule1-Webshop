@@ -16,6 +16,7 @@ namespace Logic
         public decimal Price { get; private set; }
         public int Stock { get; private set; }
         public double Points { get; private set; }
+        public int orderid { get; private set; }
         private bool HasEarlyAccess { get; set; } = false;
 
         private readonly IProductDAL _product;
@@ -30,10 +31,11 @@ namespace Logic
             Stock = stock;
             Points = CalculatePoints();
         }
-        public Product(decimal prize, ProductName productname)
+        public Product(int Orderid, decimal prize, ProductName productname)
         {
             Price = prize;
             productName = productname;
+            orderid = Orderid;
             Points = CalculatePoints();
         }
 

@@ -20,6 +20,10 @@ namespace Logic
         {
            return _order.GetOrders(userid);
         }
+        public List<int> GetOrdernumbers(int userid)
+        {
+            return _order.GetOrderIDS(userid);
+        }
         public void OrderProduct(List<Product> productValues, IProductDAL Product, int userid)
         {
             Product product = new Product(Product);
@@ -35,6 +39,22 @@ namespace Logic
             }
 
         }
+        public void OrderProductToExistingOrder(List<Product> productValues, IProductDAL Product,int orderid, int userid)
+        {
+            Product product = new Product(Product);
+            if (CanBeBought(productValues, product))
+            {
+                foreach (var item in productValues)
+                {
+
+                    int productid = _order.GetProductID(item.productName.ToString());
+                    _order.AddOrderToExistingOrder(Date, productid,orderid, userid);
+                    product.UpdateProductStock(item.productName);
+                }
+            }
+
+        }
+
         public bool CanBeBought(List<Product> productValues,Product product)
         {
             foreach(var item in productValues)

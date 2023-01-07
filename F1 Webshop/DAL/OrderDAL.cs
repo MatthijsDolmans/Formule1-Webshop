@@ -18,42 +18,46 @@ namespace DAL
         public List<Product> GetOrders(int userid)
         {
            List<int> Orderids = GetOrderIDS(userid);
-           List<int> productIds = GetProductIDS(Orderids);
+         
            List<Product> products = new List<Product>();
-            foreach (var item in productIds)
+            foreach (var items in Orderids)
             {
-                string Query = "SELECT * FROM Product where ProductID = @productID";
-
-                using (SqlConnection conn = new SqlConnection(Connectionstring))
+                List<int> productIds = GetProductIDS(items);
+                foreach (var item in productIds)
                 {
-                    using (SqlCommand query = new SqlCommand(Query, conn))
+                    string Query = "SELECT * FROM Product where ProductID = @productID";
+
+                    using (SqlConnection conn = new SqlConnection(Connectionstring))
                     {
-                        query.Parameters.AddWithValue("@productID", item);
-                        conn.Open();
-
-                        var reader = query.ExecuteReader();
-
-                        while (reader.Read())
+                        using (SqlCommand query = new SqlCommand(Query, conn))
                         {
-                            foreach (ProductNameEnum.ProductName name in Enum.GetValues(typeof(ProductNameEnum.ProductName)))
-                            {
-                                string productname = Convert.ToString(reader["ProductName"]);
-                                if (name.ToString() == productname)
-                                {
-                                    Product product = new Product(Convert.ToDecimal(reader["Price"]), name);
-                                    products.Add(product);
-                                    break;
-                                }
-                            }                       
-                        }
+                            query.Parameters.AddWithValue("@productID", item);
+                            conn.Open();
 
+                            var reader = query.ExecuteReader();
+
+                            while (reader.Read())
+                            {
+                                foreach (ProductNameEnum.ProductName name in Enum.GetValues(typeof(ProductNameEnum.ProductName)))
+                                {
+                                    string productname = Convert.ToString(reader["ProductName"]);
+                                    if (name.ToString() == productname)
+                                    {
+                                        Product product = new Product(items,Convert.ToDecimal(reader["Price"]), name);
+                                        products.Add(product);
+                                        break;
+                                    }
+                                }
+                            }
+
+                        }
                     }
                 }
             }
             return products;
         }
 
-        private List<int> GetOrderIDS(int userid)
+        public List<int> GetOrderIDS(int userid)
         {
             string Query = "SELECT OrderId FROM [dbo].[Order] WHERE CustomerId = @CustomerId";
             List<int> OrderIds = new List<int>();
@@ -75,17 +79,16 @@ namespace DAL
             }
         }
 
-        private List<int> GetProductIDS(List<int> ids)
+        private List<int> GetProductIDS(int ids)
         {
             List<int> ProductIds = new List<int>();
-            foreach( var item in ids)
-            {
+
                 string Query = "SELECT ProductID FROM [dbo].[ProductOrder] WHERE OrderId = @OrderId";
                 using (SqlConnection conn = new SqlConnection(Connectionstring))
                 {
                     SqlCommand comm = new SqlCommand(Query, conn);
                     conn.Open();
-                    comm.Parameters.AddWithValue("@OrderId", item);
+                    comm.Parameters.AddWithValue("@OrderId", ids);
                     using (SqlDataReader reader = comm.ExecuteReader())
                     {
                         while (reader.Read())
@@ -94,7 +97,7 @@ namespace DAL
                         }
                         conn.Close();
                     }
-                }
+                
 
             }
             return ProductIds;
@@ -128,6 +131,22 @@ namespace DAL
                 comm.ExecuteNonQuery();
             }
         }
+        public void AddOrderToExistingOrder(DateTime date, int ProductId, int orderid, int userid)
+        {
+            string Query2 = "INSERT INTO [dbo].[ProductOrder]([OrderId],[ProductID]) VALUES (@OrderId,@ProductId)";
+
+            using (SqlConnection conn = new SqlConnection(Connectionstring))
+            {
+                conn.Open();
+
+                SqlCommand comm = conn.CreateCommand();
+                comm.CommandText = Query2;
+                comm.Parameters.AddWithValue("@ProductId", ProductId);
+                comm.Parameters.AddWithValue("@OrderId", orderid);
+                comm.ExecuteNonQuery();
+            }
+        }
+
         public int GetProductID(string productname)
         {
             int productid = 0;
