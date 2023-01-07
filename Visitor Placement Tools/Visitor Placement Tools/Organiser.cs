@@ -21,6 +21,14 @@ namespace Visitor_Placement_Tools
         {
             Event NewEvent = new Event(StartDate, MaxVisitors);
             Events.Add(NewEvent);
+           
+        }
+        public void Placeintogroups(Group group)
+        {
+            foreach(var item in Events)
+            {
+                item.placeGroups(group);
+            }
         }
     }
 }
