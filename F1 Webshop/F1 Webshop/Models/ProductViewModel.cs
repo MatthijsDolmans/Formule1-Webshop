@@ -8,12 +8,13 @@ namespace F1_Webshop.Models
 {
     public class ProductViewModel
     {
-        public List<Product> products { get; set; }
+        public Product ?products { get; set; }
 
         public ProductName ProductName { get; set; }
 
-        public List<int> ordernumbers { get; set; }
+        public List<int> ?ordernumbers { get; set; }
         public int chosenordernumber { get; set; }
+        public string ?Error { get; set; }
     }
 }
 

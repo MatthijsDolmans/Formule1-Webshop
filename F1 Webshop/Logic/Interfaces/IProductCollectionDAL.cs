@@ -9,6 +9,6 @@ namespace Logic.Interfaces
 {
     public interface IProductCollectionDAL
     {
-        List<Product> GetProduct(ProductName productname);
+        Product GetProduct(ProductName productname);
     }
 }

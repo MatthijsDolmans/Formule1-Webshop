@@ -56,18 +56,21 @@
 
 @if (Model.products != null)
 {
-@foreach (var item in Model.products)
-{
     <div class="row">
         <div class="col">
             <div class="form-group">
                     <h1>ProductInformation</h1>
                 <strong>
-                <label class="control-label"> Price: €@item.Price </label>
+                <label class="control-label"> Price: €@Model.products.Price </label>
                 <br>
-                <label class="control-label">  Amount of items in stock: @item.Stock </label>
+                    <label class="control-label">  Amount of items in stock: @Model.products.Stock </label>
                 <br>
-                <label class="control-label"> Productname: @item.productName </label>
+                    <label class="control-label"> Productname: @Model.products.productName </label>
+                <br>
+                @if(Model.Error != null)
+                {
+                    <label class="errorlabel"> @Model.Error</label>
+                }
                     </strong>
             </div>
                 <form method="get">
@@ -75,7 +78,6 @@
                 </form>
         </div>
     </div>
-}
     @if (Model.ordernumbers != null)
     {
         <form>
@@ -104,7 +106,9 @@
 
 
 <style scoped>
-
+    .errorlabel{
+        color: red;
+    }
     .ordernumbers {
         position: absolute;
         top: 35%;

@@ -11,5 +11,6 @@ namespace Logic.Interfaces
     {
         public void UpdateProductPrice(ProductName productName, decimal price);
         public void UpdateProductStock(ProductName productName);
+        public Product GetProductById(int ProductId);
     }
 }

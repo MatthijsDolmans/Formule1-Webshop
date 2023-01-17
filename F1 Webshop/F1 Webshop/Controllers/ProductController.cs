@@ -14,8 +14,9 @@ namespace F1_Webshop.Controllers
         {
             ProductDAL productdal = new ProductDAL();
             OrderDAL orderdal = new OrderDAL();
+            OrderCollection orderCollection = new(orderdal);
             Order order = new Order(orderdal);
-            productViewModel.ordernumbers = order.GetOrdernumbers((int)HttpContext.Session.GetInt32("UserId"));
+            productViewModel.ordernumbers = orderCollection.GetAllOrderIds((int)HttpContext.Session.GetInt32("UserId"));
             if (!string.IsNullOrEmpty(go))
             {
                 HttpContext.Response.Cookies.Append("ProductName", productViewModel.ProductName.ToString());
@@ -25,19 +26,27 @@ namespace F1_Webshop.Controllers
             {
                
                 string productname = HttpContext.Request.Cookies["ProductName"];
-                order.OrderProduct(GetProductInformationToOrder(productname,productViewModel),productdal, (int)HttpContext.Session.GetInt32("UserId"));
-                return RedirectToAction("Index", "Order");
+                string error = order.OrderProduct(GetProductInformationToOrder(productname,productViewModel),productdal, (int)HttpContext.Session.GetInt32("UserId"));
+                if (error == "Fail")
+                {
+                    productViewModel.Error = "Product is out of stock";
+                    return View(productViewModel);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Order");
+                }
             }
             if (!string.IsNullOrEmpty(Orderbyorderid))
             {
 
                 string productname = HttpContext.Request.Cookies["ProductName"];
-                order.OrderProductToExistingOrder(GetProductInformationToOrder(productname, productViewModel), productdal,productViewModel.chosenordernumber, (int)HttpContext.Session.GetInt32("UserId"));
+                order.OrderProductToExistingOrder(GetProductInformationToOrder(productname, productViewModel),productdal,productViewModel.chosenordernumber, (int)HttpContext.Session.GetInt32("UserId"));
                 return RedirectToAction("Index", "Order");
             }
             return View(productViewModel);
         }
-        public List<Product> GetProductInformation(ProductViewModel productviewmodel)
+        public Product GetProductInformation(ProductViewModel productviewmodel)
         {
             ProductDAL productdal = new ProductDAL();
             ProductCollection product = new ProductCollection(productdal);
@@ -45,7 +54,7 @@ namespace F1_Webshop.Controllers
             
             return productviewmodel.products;
         }
-        public List<Product> GetProductInformationToOrder(string productname, ProductViewModel productviewmodel)
+        public Product GetProductInformationToOrder(string productname, ProductViewModel productviewmodel)
         {
             ProductDAL productdal = new ProductDAL();
             ProductCollection product = new ProductCollection(productdal);

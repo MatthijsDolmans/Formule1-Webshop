@@ -16,15 +16,18 @@
 
 </thead>
         <tbody>
-               @foreach(var item in Model.Boughtproducts)
+               @foreach(var item in Model.Orders)
                 {
+                    @foreach(var item1 in item.OrderedProducts)
+                    {
                 <tr>
-                    <td>@item.orderid</td>
-                    <td>@item.Price</td>
-                    <td>@item.productName</td>
-                    <td>@item.Points</td>
+                    <td>@item.Id</td>
+                    <td>@item1.Price</td>
+                    <td>@item1.productName</td>
+                    <td>@item1.Points</td>
                     <td>01-12-2022</td>
                 </tr>
+                }
                 }
         </tbody>
     <tfoot>

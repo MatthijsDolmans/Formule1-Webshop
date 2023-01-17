@@ -12,17 +12,17 @@ namespace Logic
     {
         public List<Product> Products { get; set; }
 
-        private readonly IProductCollectionDAL _product;
+        private readonly IProductCollectionDAL _Dal;
 
         public ProductCollection(IProductCollectionDAL product)
         {
-            _product = product;
+            _Dal = product;
         }
 
-        public List<Product> GetProduct(ProductName productname)
+        public Product GetProduct(ProductName productname)
         {
-            List<Product> item = _product.GetProduct(productname);
-            return item;
+            Product product = _Dal.GetProduct(productname);
+            return product;
         }
     }
 }

@@ -9,67 +9,56 @@ namespace Logic
 {
     public class Order
     {
-        public DateTime Date { get; set; }
-        private readonly IorderDAL _order;
+        public DateTime Date { get; private set; }
+        public int Id { get; private set; }
+        public List<Product> OrderedProducts { get; private set; }
+
+        private readonly IorderDAL _dal;
         public Order(IorderDAL order)
         {
-            _order = order;
+            _dal = order;
             Date = DateTime.Now;
         }
-        public List<Product> GetOrders(int userid)
+        public Order(List<Product> products, int orderid)
         {
-           return _order.GetOrders(userid);
+            OrderedProducts = products;
+            Id = orderid;
         }
-        public List<int> GetOrdernumbers(int userid)
+
+        //bool
+        public string OrderProduct(Product product, IProductDAL Product, int userid)
         {
-            return _order.GetOrderIDS(userid);
-        }
-        public void OrderProduct(List<Product> productValues, IProductDAL Product, int userid)
-        {
-            Product product = new Product(Product);
-            if (CanBeBought(productValues, product))
+            if (CanBeBought(product))
             {
-                foreach (var item in productValues)
-                {
-                    
-                   int productid = _order.GetProductID(item.productName.ToString());
-                    _order.MakeOrder(Date, productid,userid);
-                    product.UpdateProductStock(item.productName);
-                }
+                _dal.MakeOrder(Date, product.Id, userid);
+                Product.UpdateProductStock(product.productName);
+                return "Succeed";
             }
-
-        }
-        public void OrderProductToExistingOrder(List<Product> productValues, IProductDAL Product,int orderid, int userid)
-        {
-            Product product = new Product(Product);
-            if (CanBeBought(productValues, product))
+            else
             {
-                foreach (var item in productValues)
-                {
-
-                    int productid = _order.GetProductID(item.productName.ToString());
-                    _order.AddOrderToExistingOrder(Date, productid,orderid, userid);
-                    product.UpdateProductStock(item.productName);
-                }
+                return "Fail";
             }
-
+        }
+          
+        public void OrderProductToExistingOrder(Product product, IProductDAL Product, int orderid, int userid)
+        {
+            if (CanBeBought(product))
+            {
+                    _dal.AddOrderToExistingOrder(product.Id,orderid);
+                    Product.UpdateProductStock(product.productName);
+            }
         }
 
-        public bool CanBeBought(List<Product> productValues,Product product)
-        {
-            foreach(var item in productValues)
-            {
-                if (product.IsProductInStock(item.Stock) == true & product.ProductNeedsEarlyaccess() == false)
+        public bool CanBeBought(Product product)
+        {            
+                if (product.IsProductInStock() == true & product.ProductNeedsEarlyaccess() == false)
                 {
                     return true;
                 }
                 else
                 {
                     return false;
-                }
-            }
-            return false;
-          
+                }        
         }
     }
 }

@@ -6,6 +6,6 @@ namespace F1_Webshop.Models
 {
     public class OrderViewModel
     {
-        public List<Product> Boughtproducts { get; set; }
+        public List<Order> Orders { get; set; }
     }
 }

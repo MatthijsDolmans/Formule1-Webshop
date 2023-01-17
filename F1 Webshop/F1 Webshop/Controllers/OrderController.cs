@@ -10,9 +10,10 @@ namespace F1_Webshop.Controllers
         
         public IActionResult Index(OrderViewModel orderviewmodel)
         {
-            OrderDAL orderdal = new OrderDAL();
-            Order order = new Order(orderdal);
-            orderviewmodel.Boughtproducts = order.GetOrders((int)HttpContext.Session.GetInt32("UserId"));
+            OrderDAL orderdal = new();
+            ProductDAL productdal = new();
+            OrderCollection ordercollection = new(orderdal);
+            orderviewmodel.Orders = ordercollection.GetAllOrders(productdal,(int)HttpContext.Session.GetInt32("UserId"));
             return View(orderviewmodel);
         }
 
