@@ -27,6 +27,7 @@ namespace Logic
         }
         public bool OrderProduct(Product product, IProductDAL Product, int userid)
         {
+
             if (CanBeBought(product))
             {
                 _dal.MakeOrder(Date, product.Id, userid);
