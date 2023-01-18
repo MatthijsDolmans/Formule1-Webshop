@@ -11,7 +11,7 @@ using static Logic.Helpers.ProductNameEnum;
 
 namespace DAL
 {
-    public class UserDAL : IUserDAL
+    public class UserDAL : IUserDAL, IUserCollection
     {
         private string Connectionstring = "Data Source=LAPTOP-CLO5RIMS\\SQLEXPRESS;Initial Catalog = Formule 1 webshop; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         public string GetPassword(string Email)
@@ -38,7 +38,21 @@ namespace DAL
                 return Password;
             }
         }
+        public void CreateAccount(string Name,string Email,string Password)
+        {
+            string Query = "INSERT INTO [dbo].[Customer]([Name],[Password],[Email])VALUES(@Name,@Password,@Email)";
+            using (SqlConnection conn = new SqlConnection(Connectionstring))
+            {
+                conn.Open();
 
+                SqlCommand comm = conn.CreateCommand();
+                comm.CommandText = Query;
+                comm.Parameters.AddWithValue("@Name", Name);
+                comm.Parameters.AddWithValue("@Email", Email);
+                comm.Parameters.AddWithValue("@Password", Password);
+                comm.ExecuteNonQuery();
+            }
+        }
         public int GetUserId(string Email)
         {
             int userid = 0;

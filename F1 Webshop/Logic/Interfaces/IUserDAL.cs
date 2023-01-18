@@ -10,5 +10,6 @@ namespace Logic.Interfaces
     {
         public string GetPassword(string Email);
         public int GetUserId(string Email);
+        
     }
 }

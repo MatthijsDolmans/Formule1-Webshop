@@ -22,7 +22,7 @@ namespace F1_Webshop.Controllers
             {
                 UserDAL userdal = new UserDAL();
                 User user = new User(userdal);
-                if (userviewmodel.password != null || userviewmodel.Email != null)
+                if (userviewmodel.password != null && userviewmodel.Email != null)
                 {
                     if (user.CheckLogin(userviewmodel.Email, userviewmodel.password) == true)
                     {
@@ -31,7 +31,7 @@ namespace F1_Webshop.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("password", "Incorrect password/username.");
+                        ModelState.AddModelError("password", "Incorrect password or username.");
                         return View();
                     }
                 }               
@@ -41,6 +41,22 @@ namespace F1_Webshop.Controllers
         public IActionResult CreateAccount()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult CreateAccount(UserViewModel viewmodel)
+        {
+            UserDAL userdal = new UserDAL();
+            UserCollection usercollection = new(userdal);
+            if(viewmodel.Name != null && viewmodel.Email != null && viewmodel.password != null)
+            {
+                usercollection.CreateAccount(viewmodel.Name, viewmodel.Email, viewmodel.password);
+                return RedirectToAction("Index", "User");
+            }
+            else
+            {
+                ModelState.AddModelError("password", "Every field needs to be filled in");
+                return View();
+            }
         }
 
         public IActionResult Logout()

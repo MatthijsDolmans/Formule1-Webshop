@@ -30,5 +30,6 @@ namespace Logic
         {
             return _user.GetUserId(Email);
         }
+
     }
 }

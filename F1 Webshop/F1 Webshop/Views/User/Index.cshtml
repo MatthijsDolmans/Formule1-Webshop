@@ -2,7 +2,7 @@
 
 <form method="post">
     <div class="form-group">
-        <label for="Email"></label>
+        <label for="Email">Email</label>
         <input asp-for="Email" type="text" class="form-control" id="Email" name="Email" placeholder="Email">
         <span asp-validation-for="Email"></span>
     </div>
@@ -11,9 +11,10 @@
         <input asp-for="password" type="text" class="form-control" id="password"  placeholder="Enter Password">
         <span asp-validation-for="password"></span>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Login</button>
 </form>
-<form method="post">
+<form method="get">
     <br />
-  <button asp-controller="User" asp-action="CreateAccount" type="submit" class="btn btn-primary">CreateAccount</button>
+    <button asp-controller="User" asp-action="CreateAccount" type="submit" class="btn btn-primary">CreateAccount</button>
 </form>
+
