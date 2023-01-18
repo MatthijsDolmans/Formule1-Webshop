@@ -32,7 +32,7 @@ namespace Logic
                 {
                   products.Add(_ProductDal.GetProductById(productid));
                 }
-                Order order = new(products,orderid);
+                Order order = new(products,orderid, _dal.GetDateOfOrder(orderid));
                 orders.Add(order);
             }
             return orders;

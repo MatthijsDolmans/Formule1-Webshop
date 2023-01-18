@@ -19,24 +19,23 @@ namespace Logic
             _dal = order;
             Date = DateTime.Now;
         }
-        public Order(List<Product> products, int orderid)
+        public Order(List<Product> products, int orderid, DateTime date)
         {
             OrderedProducts = products;
             Id = orderid;
+            Date = date;
         }
-
-        //bool
-        public string OrderProduct(Product product, IProductDAL Product, int userid)
+        public bool OrderProduct(Product product, IProductDAL Product, int userid)
         {
             if (CanBeBought(product))
             {
                 _dal.MakeOrder(Date, product.Id, userid);
                 Product.UpdateProductStock(product.productName);
-                return "Succeed";
+                return true;
             }
             else
             {
-                return "Fail";
+                return false;
             }
         }
           

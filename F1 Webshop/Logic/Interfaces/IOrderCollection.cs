@@ -10,5 +10,6 @@ namespace Logic.Interfaces
     {
         public List<int> GetProductIDSOfOrder(int OrderId);
         public List<int> GetAllOrderIds(int userid);
+        public DateTime GetDateOfOrder(int orderid);
     }
 }

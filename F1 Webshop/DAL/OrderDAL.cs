@@ -38,6 +38,20 @@ namespace DAL
                 }
             }
         }
+        public DateTime GetDateOfOrder(int orderid)
+        {
+            DateTime Date;
+            string Query = "SELECT Date FROM [dbo].[Order] WHERE OrderId = @OrderId";
+            List<int> OrderIds = new List<int>();
+            using (SqlConnection conn = new SqlConnection(Connectionstring))
+            {
+                SqlCommand comm = new SqlCommand(Query, conn);
+                conn.Open();
+                comm.Parameters.AddWithValue("@OrderId", orderid);
+                Date = Convert.ToDateTime(comm.ExecuteScalar());
+            }
+            return Date;
+        }
 
         public List<int> GetProductIDSOfOrder(int OrderId)
         {
@@ -75,18 +89,7 @@ namespace DAL
                 comm.Parameters.AddWithValue("@OrderId", orderid);
                 comm.ExecuteNonQuery();
             }
-            string Query2 = "INSERT INTO [dbo].[ProductOrder]([OrderId],[ProductID]) VALUES (@OrderId,@ProductId)";
-
-            using (SqlConnection conn = new SqlConnection(Connectionstring))
-            {
-                conn.Open();
-
-                SqlCommand comm = conn.CreateCommand();
-                comm.CommandText = Query2;
-                comm.Parameters.AddWithValue("@ProductId", ProductId);
-                comm.Parameters.AddWithValue("@OrderId", orderid);
-                comm.ExecuteNonQuery();
-            }
+            AddOrderToExistingOrder(ProductId, orderid);
         }
         public void AddOrderToExistingOrder(int ProductId, int orderid)
         {
