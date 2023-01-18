@@ -97,6 +97,13 @@
                     </select>
                 </div>
             </div>
+                @if (Model.Error != null)
+                {
+                    <strong>
+                        <label class="errorlabel"> @Model.Error</label>
+                    </strong>
+                    <br />
+                }
                 <button class="btn" name="orderbyorderid" value="Orderbyorderid">Order to existing order</button>
             </section>
             </form>

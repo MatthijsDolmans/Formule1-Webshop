@@ -60,7 +60,16 @@ namespace F1_Webshop.Controllers
                         break;
                     }
                 }
-                order.OrderProductToExistingOrder(productViewModel.products, productdal,productViewModel.chosenordernumber, (int)HttpContext.Session.GetInt32("UserId"));
+                bool ordersucceed = order.OrderProductToExistingOrder(productViewModel.products, productdal,productViewModel.chosenordernumber, (int)HttpContext.Session.GetInt32("UserId"));
+                if (ordersucceed == false)
+                {
+                    productViewModel.Error = "Product is out of stock";
+                    return View(productViewModel);
+                }
+                else
+                {
+                    return RedirectToAction("Index", "Order");
+                }
                 return RedirectToAction("Index", "Order");
             }
             return View(productViewModel);

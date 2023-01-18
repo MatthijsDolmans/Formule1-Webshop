@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace Logic
 {
@@ -40,12 +41,17 @@ namespace Logic
             }
         }
           
-        public void OrderProductToExistingOrder(Product product, IProductDAL Product, int orderid, int userid)
+        public bool OrderProductToExistingOrder(Product product, IProductDAL Product, int orderid, int userid)
         {
             if (CanBeBought(product))
             {
                     _dal.AddOrderToExistingOrder(product.Id,orderid);
                     Product.UpdateProductStock(product.productName);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
