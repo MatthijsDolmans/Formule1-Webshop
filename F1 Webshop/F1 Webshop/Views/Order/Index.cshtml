@@ -1,4 +1,5 @@
-﻿@model OrderViewModel
+﻿@using Logic
+@model OrderViewModel
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -16,16 +17,16 @@
 
 </thead>
         <tbody>
-               @foreach(var item in Model.Orders)
+               @foreach(Order order in Model.Orders)
                 {
-                    @foreach(var item1 in item.OrderedProducts)
+                    @foreach(Product product in order.OrderedProducts)
                     {
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item1.Price</td>
-                    <td>@item1.productName</td>
-                    <td>@item1.Points</td>
-                        <td>@item.Date.ToString("dd/MM/yyyy")</td>
+                    <td>@product.Id</td>
+                    <td>@product.Price</td>
+                    <td>@product.productName</td>
+                    <td>@product.Points</td>
+                        <td>@order.Date.ToString("dd/MM/yyyy")</td>
                 </tr>
                 }
                 }

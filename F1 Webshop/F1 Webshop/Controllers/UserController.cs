@@ -18,8 +18,6 @@ namespace F1_Webshop.Controllers
         [HttpPost]
         public IActionResult Index(UserViewModel userviewmodel)
         {
-            if (ModelState.IsValid)
-            {
                 UserDAL userdal = new UserDAL();
                 User user = new User(userdal);
                 if (userviewmodel.password != null && userviewmodel.Email != null)
@@ -35,7 +33,6 @@ namespace F1_Webshop.Controllers
                         return View();
                     }
                 }               
-            }
             return View();  
         }
         public IActionResult CreateAccount()
@@ -58,12 +55,31 @@ namespace F1_Webshop.Controllers
                 return View();
             }
         }
+        public IActionResult DeleteUsers(UserViewModel viewmodel)
+        {
+            UserDAL userdal = new UserDAL();
+            UserCollection usercollection = new(userdal);
+            viewmodel.Users = usercollection.GetUsers();
+            return View(viewmodel);
+        }
 
+        [HttpPost]
+        public IActionResult DeleteUsers(UserViewModel viewmodel, int id)
+        {
+            UserDAL userdal = new UserDAL();
+            User user = new(userdal);
+            UserCollection usercollection = new(userdal);
+            int Id = user.GetUserId(viewmodel.ChosenEmail);
+            usercollection.DeleteUser(Id);
+            return RedirectToAction("Index", "User");
+        }
         public IActionResult Logout()
         {
             HttpContext.Session.Clear();
             return RedirectToAction("Index", "User");
         }
     }
-
 }
+
+
+

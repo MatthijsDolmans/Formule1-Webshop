@@ -12,10 +12,9 @@ using static System.Formats.Asn1.AsnWriter;
 
 namespace DAL
 {
-    public class OrderDAL : IorderDAL, IOrderCollection
+    public class OrderDAL : IorderDAL, IOrderCollectionDAL
     {
         private string Connectionstring = "Data Source=LAPTOP-CLO5RIMS\\SQLEXPRESS;Initial Catalog = Formule 1 webshop; Integrated Security = True; Connect Timeout = 30; Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
 
         public List<int> GetAllOrderIds(int userid)
         {
@@ -32,7 +31,6 @@ namespace DAL
                     {
                         OrderIds.Add(Convert.ToInt32(reader["OrderId"]));
                     }
-
                     conn.Close();
                     return OrderIds;
                 }

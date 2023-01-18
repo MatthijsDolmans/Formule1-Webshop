@@ -16,8 +16,5 @@ namespace F1_Webshop.Controllers
             orderviewmodel.Orders = ordercollection.GetAllOrders(productdal,(int)HttpContext.Session.GetInt32("UserId"));
             return View(orderviewmodel);
         }
-
-
-    
     }
 }

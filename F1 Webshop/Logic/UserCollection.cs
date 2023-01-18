@@ -9,15 +9,23 @@ namespace Logic
 {
     public class UserCollection
     {
-        private readonly IUserCollection _Dal;
+        private readonly IUserCollectionDAL _Dal;
 
-        public UserCollection(IUserCollection dal)
+        public UserCollection(IUserCollectionDAL dal)
         {
             _Dal = dal;
         }
         public void CreateAccount(string Name, string Email, string Password)
         {
             _Dal.CreateAccount(Name, Email, Password);
+        }
+        public List<User> GetUsers()
+        {
+           return _Dal.GetUsers();
+        }
+        public void DeleteUser(int UserId)
+        {
+            _Dal.DeleteUser(UserId);
         }
     }
 }

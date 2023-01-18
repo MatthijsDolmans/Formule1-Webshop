@@ -1,0 +1,20 @@
+﻿@using Logic
+@model UserViewModel
+
+<form method="post">
+    @if(Model.Users != null)
+    {
+    <select asp-for="ChosenEmail" class="form-control">
+        @foreach (User user in Model.Users)
+        {
+            <option>
+                @user.Email
+            </option>
+        }
+    </select>
+    }
+    <br />
+    <button asp-controller="User" asp-action="DeleteUsers" value="ChosenEmail" type="submit" class="btn btn-primary">DeleteThisUser</button>
+</form>
+
+

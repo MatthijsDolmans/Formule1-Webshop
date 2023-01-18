@@ -9,9 +9,9 @@ namespace Logic
 {
     public class OrderCollection
     {
-        private readonly IOrderCollection _dal;
+        private readonly IOrderCollectionDAL _dal;
 
-        public OrderCollection(IOrderCollection dal)
+        public OrderCollection(IOrderCollectionDAL dal)
         {
             _dal = dal;
         }

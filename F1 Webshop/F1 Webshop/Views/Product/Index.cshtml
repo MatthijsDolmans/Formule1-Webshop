@@ -88,10 +88,10 @@
                     <label>ordernumber</label>
                     </strong>
                     <select asp-for="chosenordernumber" class="form-control">
-                        @foreach (var item in Model.ordernumbers)
+                        @foreach (int id in Model.ordernumbers)
                         {
                             <option>
-                                @item
+                                @id
                             </option>
                         }
                     </select>

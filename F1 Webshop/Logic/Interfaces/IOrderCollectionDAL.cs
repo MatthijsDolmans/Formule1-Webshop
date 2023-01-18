@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic.Interfaces
 {
-    public interface IOrderCollection
+    public interface IOrderCollectionDAL
     {
         public List<int> GetProductIDSOfOrder(int OrderId);
         public List<int> GetAllOrderIds(int userid);
